@@ -1,0 +1,14 @@
+{
+    "project_name": "",
+    "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
+    "project_environment": "dev",
+    "fastapi_title": "",
+    "fastapi_description": "",
+    "fastapi_version": "0.0.1",
+    "gunicorn_port": "8000",
+    "postgres_username": "",
+    "postgres_password": "",
+    "postgres_database": "",
+    "postgres_host": "localhost",
+    "postgres_port": "5432"
+}

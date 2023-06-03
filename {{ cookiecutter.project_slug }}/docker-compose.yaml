@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+    postgres:
+        image: postgres:15
+        restart: always
+        environment:
+          - POSTGRES_USER={{ cookiecutter.postgres_username }}
+          - POSTGRES_PASSWORD={{ cookiecutter.postgres_password }}
+          - POSTGRES_DB={{ cookiecutter.postgres_database }}
+        logging:
+          options:
+            max-size: 10m
+            max-file: "3"
+        ports:
+          - '{{ cookiecutter.postgres_port }}:5432'
